@@ -81,13 +81,13 @@ function linkCanvases() {
 function initAudio() {
 
       // Default values for the parameters
-    AudBuffSiz = 512;  // Too small and limited range of pitches. Too large and it may lead to "warbling". The ideal balance is data-dependent
-    AudAmplify = 0.01; // THis may need to be "tweaked" for different data sets
-    AudAmpScale = 1.0; // 1.3 is good to emphasise "peakiness", 0.5 good to "smooth" the sounds out a bit
-    AudMinFreq = 100.0;  // In Hz
-    AudMaxFreq = 2000.0;
-    AudMaxBuff = 32;  // The maximum number of buffers (the larger the more memory, but the less chance of "clicks" from fast mouse movement)
-    AudFadeTime = 0.5; // Fade in/out time in seconds. Too small and get "clicking"
+    AudBuffSiz = 1024;  // Too small and limited range of pitches. Too large and it may lead to "warbling". The ideal balance is data-dependent. 512 ok for alma
+    AudAmplify = 0.04; // This may need to be "tweaked" for different data sets (0.01 ok)
+    AudAmpScale = 0.8; // 1.3 is good to emphasise "peakiness", 0.5 good to "smooth" the sounds out a bit
+    AudMinFreq = 50.0;  // In Hz
+    AudMaxFreq = 1000.0;
+    AudMaxBuff = 64;  // The maximum number of buffers (the larger the more memory, but the less chance of "clicks" from fast mouse movement)
+    AudFadeTime = 0.4; // Fade in/out time in seconds. Too small and get "clicking"
 
     AudioCtx = new AudioContext();
     AudSampleRate = AudioCtx.sampleRate;
