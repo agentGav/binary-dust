@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <script src="jsfft-master/lib/complex_array.js"></script>
+  <script src="jsfft-master/lib/fft.js"></script>
+  <script src="ALMAcube.js"></script>
+  <title>ALMAcube</title>
+</head>
+<body bgcolor="black">
+
+
+  <!-- Input filelist and output for the contents -->
+
+
+  <!-- The three canvases -->
+
+
+<canvas id="ImageCanvas" width="1400" height="580" style='border: 1px solid #999999; background-color: #222222;'></canvas>
+<br>
+<canvas id="SpecCanvas" width="1400" height="200" style='border: 1px solid #999999; background-color: black;'></canvas>
+<br>
+<canvas id="ParamCanvas" width="1400" height="50" style='padding: 1px;'></canvas>
+
+<script>
+  linkCanvases();
+  initAudio();
+  createListeners();
+</script>
+<br>
+<input type="file" id="files" name="files[]" />
+<script>
+  document.getElementById('files').addEventListener('change', newData, false);
+</script>
+<br>
+
+
+</body>
+</html>
